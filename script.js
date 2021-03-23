@@ -64,7 +64,6 @@ function stopCorrespondentOver() {
     })
 }
 
-PIANO.addEventListener('click', (event) => playNote(event.target))
 PIANO.addEventListener('mousedown', startCorrespondentOver)
 PIANO.addEventListener('mouseup', stopCorrespondentOver)
 
