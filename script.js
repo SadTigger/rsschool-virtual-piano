@@ -65,12 +65,12 @@ function stopCorrespondentOver() {
 }
 
 PIANO.addEventListener('mousedown', startCorrespondentOver)
-PIANO.addEventListener('mouseup', stopCorrespondentOver)
+document.addEventListener('mouseup', stopCorrespondentOver)
 
 /* hands magic ob piano keys*/
 
 /* keyboard actions */
-document.addEventListener('keydown', (event) => {
+PIANO.addEventListener('keydown', (event) => {
     if (event.repeat) return
 
     const key = event.code
@@ -90,7 +90,7 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-document.addEventListener('keyup', (event) => {
+PIANO.addEventListener('keyup', (event) => {
     const key = event.code
     const whiteKeyIndex = WHITE_KEY_CODES.indexOf(key)
     const blackKeyIndex = BLACK_KEY_CODES.indexOf(key)
